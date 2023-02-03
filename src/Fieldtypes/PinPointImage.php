@@ -2,26 +2,13 @@
 
 namespace Weareframework\PinpointImage\Fieldtypes;
 
-use Illuminate\Support\Facades\Log;
 use Statamic\Exceptions\AssetContainerNotFoundException;
-use Statamic\Facades\Asset;
 use Statamic\Facades\AssetContainer;
 use Statamic\Facades\GraphQL;
 use Statamic\Fields\Fields as BlueprintFields;
 use Statamic\Fields\Fieldtype;
-use Statamic\Fieldtypes\Assets\DimensionsRule;
-use Statamic\Fieldtypes\Assets\ImageRule;
-use Statamic\Fieldtypes\Assets\MaxRule;
-use Statamic\Fieldtypes\Assets\MimesRule;
-use Statamic\Fieldtypes\Assets\MimetypesRule;
-use Statamic\Fieldtypes\Assets\MinRule;
 use Statamic\Fieldtypes\Assets\UndefinedContainerException;
-use Statamic\GraphQL\Types\AssetInterface;
-use Statamic\Http\Resources\CP\Assets\Asset as AssetResource;
-use Statamic\Support\Arr;
-use Statamic\Support\Str;
 use Weareframework\PinpointImage\GraphQL\PinPointImageFieldType;
-use Statamic\GraphQL\Types\ArrayType;
 
 class PinPointImage extends Fieldtype
 {
@@ -152,5 +139,4 @@ class PinPointImage extends Fieldtype
     {
         return GraphQL::type(PinPointImageFieldType::NAME);
     }
-
 }

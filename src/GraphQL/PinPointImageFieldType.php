@@ -2,13 +2,9 @@
 
 namespace Weareframework\PinpointImage\GraphQL;
 
-
-use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Log;
 use Statamic\Facades\Asset;
 use Statamic\Facades\GraphQL;
 use Statamic\GraphQL\Types\ArrayType;
-use Statamic\GraphQL\Types\AssetInterface;
 use Statamic\Http\Resources\API\AssetResource;
 
 class PinPointImageFieldType extends \Rebing\GraphQL\Support\Type
@@ -30,7 +26,7 @@ class PinPointImageFieldType extends \Rebing\GraphQL\Support\Type
                 'type' => GraphQL::type(ArrayType::NAME),
                 'resolve' => function ($field) {
 
-                    if (! isset($field['image'])) {
+                    if (!isset($field['image'])) {
                         return [];
                     }
 
